@@ -1,0 +1,16 @@
+.bloc {
+    text-align: center;
+}
+
+.bloc img {
+    width: 250px;
+    height: 250px;
+}
+
+.bloc h1 {
+    font-size: 70px;
+}
+
+.bloc h2 {
+    font-size: 40px;
+}

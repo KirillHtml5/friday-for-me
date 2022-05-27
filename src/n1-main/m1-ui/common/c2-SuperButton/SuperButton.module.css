@@ -1,0 +1,51 @@
+.default {
+
+    display: inline-block;
+    padding: 15px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #c9b117;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px #c73434;
+
+}
+
+.default:hover {
+    background-color: rgba(54, 140, 243, 0.81)
+}
+
+.default:active {
+    background-color: #c9b117;
+    box-shadow: 0 5px #c73434;
+    transform: translateY(3px);
+}
+
+.red {
+    display: inline-block;
+    padding: 15px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: red;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px #c73434;
+}
+
+.red:hover {
+    background-color: rgb(115, 20, 34)
+}
+
+.red:active {
+    background-color: red;
+    box-shadow: 0 5px #c73434;
+    transform: translateY(3px);
+}
