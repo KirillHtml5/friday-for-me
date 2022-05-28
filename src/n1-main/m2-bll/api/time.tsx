@@ -1,10 +1,13 @@
-import React, {ChangeEvent, useCallback} from 'react';
+import React, {ChangeEvent, useCallback, useState} from 'react';
 import SuperButton from "../../m1-ui/common/c2-SuperButton/SuperButton";
 import {loginApi} from "./api";
 import SuperInputText from "../../m1-ui/common/c1-SuperInputText/SuperInputText";
 
+
 const Time = () => {
-const time=Date.now()
+    const t = Date.now()
+    const [time, setTime] = useState<number>(t)
+
     const onClickHandler = useCallback(() => {
         loginApi.getTime()
             .then((res) => {
@@ -31,13 +34,14 @@ const time=Date.now()
 
             })
     }, [time])
-
-
+    const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+        setTime(Number(e.currentTarget.value))
+    }
 
 
     return (
         <div>
-            {/*<SuperInputText onChange={onChangeHandler}/>*/}
+            <SuperInputText onChange={onChangeHandler}/>
             <SuperButton onClick={onClickHandler2}>time</SuperButton>
         </div>
     );
