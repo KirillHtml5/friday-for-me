@@ -1,6 +1,6 @@
 import React, {ChangeEvent, useCallback, useState} from 'react';
 import SuperButton from "../../m1-ui/common/c2-SuperButton/SuperButton";
-import {loginApi} from "./api";
+import {timeApi} from "./api";
 import SuperInputText from "../../m1-ui/common/c1-SuperInputText/SuperInputText";
 
 
@@ -9,7 +9,7 @@ const Time = () => {
     const [time, setTime] = useState<number>(t)
 
     const onClickHandler = useCallback(() => {
-        loginApi.getTime()
+        timeApi.getTime()
             .then((res) => {
                     console.log('res', res.data)
 
@@ -22,7 +22,7 @@ const Time = () => {
             })
     }, [])
     const onClickHandler2 = useCallback(() => {
-        loginApi.postTime(time)
+        timeApi.postTime(time)
             .then((res) => {
                     console.log('res', res.data)
 

@@ -3,7 +3,7 @@ import Login from "../../../n2-common/Login";
 import NewPassword from "../../../n2-common/NewPassword";
 import Profile from "../../../n2-common/Profile";
 import RecoveryPassword from "../../../n2-common/RecoveryPassword";
-import Registration from "../../../n2-common/Registration";
+import Registration from "../../../n2-common/c1-auth/a1-register/r1-ui/Registration";
 import Test from "../../../n2-common/Test";
 import Error404 from "../../../n2-common/Error404";
 

@@ -6,13 +6,20 @@ export const instance = axios.create({
     withCredentials: true,
 })
 
-export const loginApi = {
+export const timeApi = {
     getTime() {
         const promise = instance.get('/ping')
         return promise
     },
     postTime(time: number) {
         const promise = instance.post('/ping', {frontTime: time})
+        return promise
+    }
+}
+
+export const authRegisterApi={
+    register(email: string, password: string){
+        const promise= instance.post<string>('/auth/register',{email,password})
         return promise
     }
 }
