@@ -17,9 +17,15 @@ export const timeApi = {
     }
 }
 
-export const authRegisterApi={
-    register(email: string, password: string){
-        const promise= instance.post<string>('/auth/register',{email,password})
+export const authRegisterApi = {
+    register(email: string, password: string) {
+        const promise = instance.post<string>('/auth/register', {email, password})
         return promise
+    }
+}
+
+export const loginApi = {
+    login(email: string, password: string, rememberMe: boolean) {
+        return instance.post<any>('/auth/login', {email, password, rememberMe})
     }
 }
