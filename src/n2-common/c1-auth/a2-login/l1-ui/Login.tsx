@@ -5,7 +5,7 @@ import SuperButton from "../../../../n1-main/m1-ui/common/c2-SuperButton/SuperBu
 import {useDispatch, useSelector} from "react-redux";
 import {setLoginTC} from "../l2-bll/Login-reducer";
 import {ReduxRootType} from "../../../../n1-main/m2-bll/store/ReduxStore";
-import {Navigate} from "react-router-dom";
+import {Navigate, NavLink} from "react-router-dom";
 
 const Login = () => {
     const {isLoggedIn} = useSelector((store: ReduxRootType) => store.login)
@@ -48,6 +48,7 @@ const Login = () => {
         <div>
             <SuperButton onClick={logINButton}>log in</SuperButton>
         </div>
+        <NavLink to={'/registration'}>registration?</NavLink>
     </div>
 }
 
